@@ -106,7 +106,7 @@
   );
 </script>-->
 
-<script type="text/babel">
+<!--<script type="text/babel">
   var data=168;
   var MyTitle = React.createClass({
     propTypes:{
@@ -120,6 +120,92 @@
     <MyTitle title={data} />,
     document.getElementById('example')
   );
+</script>-->
+
+<!--<script type="text/babel">
+var MyTitle=React.createClass({
+  getDefaultProps:function () {
+    return {
+      title:"你好啊，全世界@！"
+    };
+  },
+
+  render:function () {
+    return <h1>{this.props.title}</h1>;
+  }
+});
+
+ReactDOM.render(
+  <MyTitle />,
+  document.body
+);
+</script>-->
+
+<!--<script type="text/babel">
+  var MyComponent =React.createClass({
+    handleClick: function () {
+      this.refs.myTextInput.focus();
+    },
+    render: function () {
+      return (
+        <div>
+          <input type="text" ref="myTextInput" />
+          <input type="button" value="Focus the text input" onclick={this.handleClick} />
+        </div>
+      );
+    }
+  });
+
+  ReactDOM.render(
+    <MyComponent />,
+    document.getElementById('example')
+  );
+</script>-->
+
+<!--<script type="text/babel">
+var LikeButton = React.createClass({
+getInitialState: function() {
+  return {liked: false};
+},
+handleClick: function(event) {
+  this.setState({liked: !this.state.liked});
+},
+render: function() {
+  var text = this.state.liked ? 'like' : 'haven\'t liked';
+  return (
+    <p onClick={this.handleClick}>
+      You {text} this. Click to toggle.
+    </p>
+  );
+}
+});
+
+ReactDOM.render(
+<LikeButton />,
+document.getElementById('example')
+);
+</script>-->
+
+<script type="text/babel">
+var Input = React.createClass({
+getInitialState: function() {
+  return {value: 'Hello!'};
+},
+handleChange: function(event) {
+  this.setState({value: event.target.value});
+},
+render: function () {
+  var value = this.state.value;
+  return (
+    <div>
+      <input type="text" value={value} onChange={this.handleChange} />
+      <p>{value}</p>
+    </div>
+  );
+}
+});
+
+ReactDOM.render(<Input/>, document.body);
 </script>
 
 </body>
