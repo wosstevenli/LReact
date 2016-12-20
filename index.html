@@ -8,10 +8,51 @@
   <script src="build/react.min.js"></script>
   <script src="build/react-dom.min.js"></script>
   <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
-  <title>Document</title>
+  <script src="js/main.js"></script>
+  <title>学习React</title>
 </head>
 <body>
+  <div id="example"></div>
+  <div class="lei1"></div>
+  <!--<script type="text/babel">
+  ReactDOM.render(
+    <h1>Hello World!</h1>,
+    document.getElementById('example')
+  );
+</script>-->
+
+<!--<script type="text/babel">
+  ReactDOM.render(
+    <h1>你好，全世界@</h1>,
+    // document.getElementById('example'),
+    document.getElementById('example')
+  );
+</script>-->
+
+<!--<script type="text/babel">
+  var names=['JAMES','JUSTIN','BIBER'];
+  ReactDOM.render(
+    <div>
+    {
+      names.map(function (name) {
+        return <div>Hello,{name}@</div>
+      })
+    }
+    </div>, //JSX 的基本语法规则：遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析。
+    document.getElementById('example')
+  );
+</script>-->
+
+<script type="text/babel">
+  var arr =[
+    <h1>缘分一道桥</h1>,
+    <h2>王力宏</h2>
+  ];
+  ReactDOM.render(
+    <div>{arr}</div>,
+    document.getElementById('example')
+  );
+</script>
 
 </body>
-<script src="js/main.js"></script>
 </html>
